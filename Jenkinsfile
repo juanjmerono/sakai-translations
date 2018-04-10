@@ -17,9 +17,9 @@ node {
 		checkout scm
 	   	// Checkout code from sakai repository
 	   	dir('sakai') {
-	   		git ( [url: 'https://github.com/sakaiproject/sakai.git', branch: env.BRANCH_NAME] )
+	   		git ( [url: 'git://github.com/sakaiproject/sakai.git', branch: env.BRANCH_NAME] )
 		   	dir('l10n') {
-		   		git url: 'https://github.com/JaSakai/l10n.git'
+		   		git url: 'git://github.com/JaSakai/l10n.git'
 		   	}
 	   	}
 	   	
